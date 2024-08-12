@@ -1,5 +1,15 @@
 import base64
 
+def banner():
+    print(f'''
+  __     __     ______     ______   __     ______     __   __
+ /\ \  _ \ \   /\  __ \   /\__  _\ /\ \   /\  __ \   /\ "-.\ \\
+ \ \ \/ ".\ \  \ \  __ \  \/_/\ \/ \ \ \  \ \ \/\ \  \ \ \-.  \\
+  \ \__/".~\_\  \ \_\ \_\    \ \_\  \ \_\  \ \_____\  \ \_\\"\_ \\
+   \/_/   \/_/   \/_/\/_/     \/_/   \/_/   \/_____/   \/_/ \/_/
+             https://github.com/TheWation/ByteInspector
+    ''')
+
 def is_non_printable(char):
     """Check if a character is non-printable."""
     return char < 0x20 or char > 0x7E
@@ -26,11 +36,15 @@ def check_non_printable_chars(input_string):
 
     return non_printable_chars, source_type
 
-# Example usage
-input_string = input("[?] Enter a base64-encoded string or a regular string: ")
-result, source_type = check_non_printable_chars(input_string)
+if __name__ == "__main__":
 
-if result:
-    print(f"[+] Non-printable characters found in {source_type}: {', '.join(result)}")
-else:
-    print(f"[-] No non-printable characters found in {source_type}.")
+    banner()
+
+    # Example usage
+    input_string = input("[?] Enter a base64-encoded string or a regular string: ")
+    result, source_type = check_non_printable_chars(input_string)
+
+    if result:
+        print(f"[+] Non-printable characters found in {source_type}: {', '.join(result)}")
+    else:
+        print(f"[-] No non-printable characters found in {source_type}.")
