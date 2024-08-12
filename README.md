@@ -1,6 +1,6 @@
 # ByteInspector
 
-The Non-Printable Character Checker is a Python-based tool designed to identify non-printable characters in base64-encoded strings and regular strings. It decodes base64 strings, converts the resulting bytes to hexadecimal, and checks each character for non-printability. The tool can handle both base64-encoded and regular string inputs. 
+The ByteInspector is a Python-based tool designed to identify non-printable characters in base64-encoded strings and regular strings. It decodes base64 strings, converts the resulting bytes to hexadecimal, and checks each character for non-printability. The tool can handle both base64-encoded and regular string inputs. 
 
 ## Features
 
@@ -13,7 +13,7 @@ The Non-Printable Character Checker is a Python-based tool designed to identify 
 Run the script using Python:
 
 ```bash
-python non_printable_checker.py
+python ByteInspector.py
 ```
 
 When prompted, enter a base64-encoded string or a regular string:
